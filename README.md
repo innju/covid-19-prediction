@@ -40,7 +40,7 @@ Figure below show the architecture of the model.
 
 ![Image](https://github.com/innju/covid-19-prediction/blob/main/figures/tensorboard.png)
 
-<br>Both of the graphs showing decrease in loss and mse measured. It is good as the loass and mse decreased with the number of epochs increased. Low mse loss indicates the model can performed well. Since the loss and metric chosen to measure the performance are mse, they have the same pattern. Batch normalization is not introduced because it will caused bias, causing the model to perform better with earlier batch samples compared to the later batch samples. Batch normalization is not a ideal way to deal with when the dataset is in time series form.
+<br>Both of the graphs showing decrease in loss and mse measured. It is good as the loss and mse decreased with the number of epochs increased. Low mse loss indicates the model can performed well. Since the loss and metric chosen to measure the performance are mse, they have the same pattern. Batch normalization is not introduced because it will caused bias, causing the model to perform better with earlier batch samples compared to the later batch samples. Batch normalization is not a ideal way to deal with when the dataset is in time series form.
 
 
 
