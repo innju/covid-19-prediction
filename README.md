@@ -24,3 +24,13 @@ The python scripts uploaded had been tested and run using Spyder(Python 3.8).
 
 ### MODEL
 Figure below show the architecture of the model.
+![Image](https://github.com/innju/covid-19-prediction/blob/main/figures/model.png)
+
+The graph of predicted and actual value is shown as below.
+
+![Image](https://github.com/innju/covid-19-prediction/blob/main/figures/predicted_vs_actual.png)
+
+The value predicted for the next day is 26344.6 which is equivalent to 26345 number of cases.Based on the graph displayed, the line for predicted data and the line for actual data have the similar pattern. This means the prediction model tend to  have good performance in making the prediction. This is further supported by the mean absolute percentage error(MAPE) calculated, which is only 0.137%. MAPE is a common metric used to measure the performance of the forecasting model.MAPE in this analysis indicate that the average difference between the forecasted value and the actual value is 0.137%. Therefore, you can see the predicted value is not exactly the same as the actual value.
+
+The epoch loss and mse i
+![Image](https://github.com/innju/covid-19-prediction/blob/main/figures/tensorboard.png)
