@@ -58,16 +58,28 @@ X_test.isnull().sum()
 
 # 3) Data cleaning
 # deal with missing data
-# replace missing data using median
+# replace missing data using interpolation
 # since only want to use cases_new column, fill NaN for that column only
-X_train['cases_new']=X_train['cases_new'].fillna(X_train['cases_new'].median())
+plt.plot(X_train['cases_new'],color='blue') # before interpolation
+plt.show()
+X_train['cases_new']=X_train['cases_new'].interpolate(method='polynomial',order=3)
+plt.plot(X_train['cases_new'],color='red') # after interpolation
+plt.show()
+# pattern of graph still the same and did not looks weird with some points shooting up
 # recheck null value
-X_train.isnull().sum()
+X_train['cases_new'].isnull().sum()
 # no more missing data for cases new column
-# use median because mean and 2nd quartile value vary a lot
-X_test['cases_new']=X_test['cases_new'].fillna(X_train['cases_new'].median())
-X_test.isnull().sum()
 
+# replace missing data using interpolation for testing dataset as well
+plt.plot(X_test['cases_new'],color='blue') # before interpolation
+plt.show()
+X_test['cases_new']=X_test['cases_new'].interpolate(method='polynomial',order=3)
+plt.plot(X_test['cases_new'],color='red') # after interpolation
+plt.show()
+# pattern of graph still the same and did not looks weird with some points shooting up
+# recheck data
+X_test['cases_new'].isnull().sum()
+# no more missing data for cases new column
 
 
 # 4) Data selected
@@ -162,15 +174,13 @@ inversed_y_predict = mms.inverse_transform(np.array(predicted).reshape(len(predi
 # graph
 v= DeploymentVisualization()
 v.predict_actual_graph(predict=inversed_y_predict, true=inversed_y_true)
-# value predicted for the next day is 26344.6 which is equivalent to 26345
-# new cases
 
 #%% Performance evaluation
 y_true = inversed_y_true
 y_pred = inversed_y_predict
 # y true is our y test
 print((mean_absolute_error(y_true,y_pred)/sum(abs(y_true)))*100)
-# reult shown mape obtained is 0.137
+# reult shown mape obtained is 0.142
 # Low mean absolute percentage error indicate the forecasting system
 # can predict accurately
 
