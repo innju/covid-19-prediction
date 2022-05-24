@@ -3,7 +3,7 @@
 ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
 
 # covid-19-prediction
-Covid-19 prediction using deep learning model. The purpose is to predict the number of new cases for the next day by tellong the model to predict based on previous 30 days data.
+Covid-19 prediction using deep learning model. The purpose is to predict the number of new cases based on previous 30 days data.
 
 The python scripts uploaded had been tested and run using Spyder(Python 3.8).
 <br>The source of the data used for this analysis is:
