@@ -16,7 +16,7 @@ The python scripts uploaded had been tested and run using Spyder(Python 3.8).
 <br>**log_covid folder**: history of training for tensorboard visualization.
 <br>**__pycache__**: Auto generated file to connect the modules with the training file.
 <br>**init.py**: initial file to connect classes and functions with training file.
-<br>**mms.pkl**: pickle file stored mean max scaler
+<br>**mms.pkl**: pickle file stored min max scaler
 <br>**model_covid.h5**: saved trained model
 <br>**covid_modules.py**: all the classes and functions created to ease the training process
 <br>**covid_train.py**: python script for model training
